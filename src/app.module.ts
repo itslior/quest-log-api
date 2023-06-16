@@ -1,7 +1,13 @@
 import { Module } from '@nestjs/common';
-import { QuestLogModule } from './features/quest-log/quest-log.module';
+import { QuestModule } from './features/quest/quest.module';
+import { MongoClientModule } from './common/mongo-client/mongo-client.module';
 
 @Module({
-  imports: [QuestLogModule],
+  imports: [
+    //common modules
+    MongoClientModule,
+    //features
+    QuestModule,
+  ],
 })
 export class AppModule {}

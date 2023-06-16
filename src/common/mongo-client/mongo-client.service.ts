@@ -17,7 +17,7 @@ export class MongoClientService<TModel extends BaseMongoModel> {
   }
 
   async upsert(
-    update: Record<string, unknown>,
+    update: Object,
     filter: Filter<TModel>,
     options?: FindOneAndUpdateOptions,
   ): Promise<WithId<TModel>> {

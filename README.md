@@ -20,6 +20,16 @@ The new packages had a different styling to them and even though they run, Types
   to solve those issues, which took me at least 30 minutes of research if not more which could help me finish the User 
   api because all of the infrastructure for the repo has been prepared, including tests. 
 
+## Design decisions
+
+  I decided to make a base mongo service for future features that will all share the core functionality (find, fineOne, Upsert)  
+- findOne - specific quest / user status retrieval
+- upsert - to add users / quests 
+- find - base functionality that I planned on using in the implementation I didn't get to
+
+I feel like this architecture is really convinient  and has a clear intention of what services are shared by features and what 
+functionality is feature specific, allowing to edit code simply and effectively if needed.
+
 ## Installation
 
 ```bash
